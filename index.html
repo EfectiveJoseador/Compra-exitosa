@@ -1000,7 +1000,7 @@ h1 small {
     document.addEventListener('DOMContentLoaded', function() {
         // Calcular fecha estimada de entrega (7 días a partir de hoy)
         const fechaEntrega = new Date();
-        fechaEntrega.setDate(fechaEntrega.getDate() + 13);
+        fechaEntrega.setDate(fechaEntrega.getDate() + 15);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         document.getElementById('fechaEntrega').textContent = fechaEntrega.toLocaleDateString('es-ES', options);
     });
