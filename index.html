@@ -68,6 +68,10 @@
             border-left: 2px solid var(--azul-acento);
         }
 
+        .paso-tiempo.ultimo-paso {
+            border-left: none;
+        }
+
         .numero-paso {
             position: absolute;
             left: -1.1rem;
@@ -902,8 +906,7 @@ h1 small {
 <body>
     <div class="contenedor-principal">
         <header>
-            <img src="logo2.jpg" alt="Logo Camisetazo" class="logo animate__animated animate__zoomIn">
-            <h1 class="animate__animated animate__fadeIn">¡Pedido Confirmado!</h1>
+            <h1 class="animate__animated animate__fadeIn" style="text-align:center;">¡Pedido Confirmado!</h1>
         </header>
 
         <div class="confirmacion-container">
@@ -920,12 +923,6 @@ h1 small {
                         <p>Fecha estimada de entrega: <span id="fechaEntrega"></span></p>
                         <p>Método de envío: Envío Express Gratuito (CTT Express)</p>
                     </div>
-
-                    <div class="item-detalle">
-                        <h4><i class="fas fa-map-marker-alt"></i> Información de envío</h4>
-                        <p>Los detalles de envío serán confirmados por Instagram.</p>
-                    </div>
-
                     <div class="item-detalle">
                         <h4><i class="fas fa-credit-card"></i> Método de pago</h4>
                         <p>Pago procesado correctamente.</p>
@@ -947,7 +944,7 @@ h1 small {
                         <p class="tiempo-estimado"><i class="fas fa-clock"></i> 7-14 días laborales</p>
                     </div>
 
-                    <div class="paso-tiempo">
+                    <div class="paso-tiempo ultimo-paso">
                         <div class="numero-paso">3</div>
                         <h4>Entrega completada</h4>
                         <p>Tu pedido llegará a la dirección proporcionada</p>
@@ -998,7 +995,7 @@ h1 small {
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Calcular fecha estimada de entrega (7 días a partir de hoy)
+        // Calcular fecha estimada de entrega (15 días a partir de hoy)
         const fechaEntrega = new Date();
         fechaEntrega.setDate(fechaEntrega.getDate() + 15);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
